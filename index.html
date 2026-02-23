@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alçada Kilundica · Abelha Maia · Developer</title>
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="src/assets/logoYellow.png"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="Alçada Kilundica — Abelha Maia. Desenvolvedor Full Stack especializado em React, Next.js, Flutter e Node.js. Construindo soluções digitais modernas e de alto impacto."
+    />
+    <meta
+      name="keywords"
+      content="desenvolvedor, react, nextjs, flutter, nodejs, frontend, mobile, backend, angola"
+    />
+    <meta property="og:title" content="Alçada Kilundica · Abelha Maia" />
+    <meta
+      property="og:description"
+      content="Full Stack Developer. React · Next.js · Flutter · Node.js"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+
+    <div class="hex-bg" aria-hidden="true">
+      <svg
+        viewBox="0 0 800 600"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <defs>
+          <pattern
+            id="hexPat"
+            x="0"
+            y="0"
+            width="60"
+            height="52"
+            patternUnits="userSpaceOnUse"
+          >
+            <polygon
+              points="30,0 60,15 60,37 30,52 0,37 0,15"
+              fill="none"
+              stroke="rgba(255,184,0,1)"
+              stroke-width="0.6"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hexPat)" />
+      </svg>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <a href="#about" class="mobile-link">Sobre</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projetos</a>
+      <a href="#services" class="mobile-link">Serviços</a>
+      <a href="#contact" class="mobile-link">Contacto</a>
+    </div>
+
+    <nav id="navbar">
+      <a href="#" class="nav-logo">AK<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#contact" class="nav-cta">Contactar</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-glow-2"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-codename">
+            <div class="hex-badge">⬡</div>
+            <span class="hero-codename-text"
+              >// Abelha Maia &mdash; Full Stack Developer</span
+            >
+          </div>
+          <h1 class="hero-name">
+            <span class="accent">Alçada</span><br />
+            <span class="hero-surname">Kilundica</span>
+          </h1>
+          <p class="hero-tagline">
+            <span
+              >Código limpo. Interfaces memoráveis. Sistemas que escalam.</span
+            ><br />
+            Construo produtos digitais do pixel ao servidor &mdash; com
+            precisão, velocidade e visão.
+          </p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-primary">Ver Projetos &rarr;</a>
+            <a href="#contact" class="btn btn-outline">Contactar</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-num" data-count="3">0+</div>
+              <div class="stat-label">Anos de Experiência</div>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <div class="stat-num" data-count="20">0+</div>
+              <div class="stat-label">Projetos Entregues</div>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <div class="stat-num" data-count="8">0+</div>
+              <div class="stat-label">Tecnologias Dominadas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="about-avatar-wrap">
+              <div class="avatar-hex">
+                <div class="avatar-initials">
+                  <img src="src/assets/me.png" alt="" />
+                </div>
+              </div>
+              <div class="avatar-ring"></div>
+              <div class="about-badge">
+                <div class="badge-dot"></div>
+                <span class="badge-text">Disponível para projetos</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text reveal" style="transition-delay: 0.15s">
+            <p class="section-label">Sobre mim</p>
+            <h2 class="section-title">Quem é o <em>Abelha Maia</em>?</h2>
+            <p class="about-desc">
+              Sou Alçada Kilundica — desenvolvedor Full Stack com paixão genuína
+              por transformar ideias complexas em produtos digitais elegantes.
+              Trabalho com o mesmo rigor e método de uma colmeia: cada linha de
+              código tem propósito, cada componente tem função.
+            </p>
+            <p class="about-desc">
+              Especializado em React, Next.js, Flutter e Node.js, crio desde
+              interfaces reactivas e fluidas até APIs robustas e escaláveis. O
+              meu diferencial está na visão de ponta a ponta — da experiência do
+              utilizador à arquitectura do servidor.
+            </p>
+            <p class="about-desc">
+              Acredito que o melhor software não é apenas funcional — é
+              intuitivo, rápido e deixa uma impressão. É isso que entrego.
+            </p>
+            <div class="about-tags">
+              <span class="tag">Resolvedor de problemas</span>
+              <span class="tag">Codigo limpo</span>
+              <span class="tag">UI/UX </span>
+              <span class="tag">Performance em primeiro</span>
+              <span class="tag">Estudos contínuos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="skills-header reveal">
+          <p class="section-label">Arsenal Técnico</p>
+          <h2 class="section-title">Habilidades <em>Técnicas</em></h2>
+          <p class="section-sub">
+            Tecnologias com as quais trabalho diariamente para construir
+            produtos de alta qualidade.
+          </p>
+        </div>
+        <div class="skills-tabs reveal">
+          <button class="skills-tab active" data-filter="all">Todas</button>
+          <button class="skills-tab" data-filter="frontend">Frontend</button>
+          <button class="skills-tab" data-filter="mobile">Mobile</button>
+          <button class="skills-tab" data-filter="backend">Backend</button>
+        </div>
+        <div class="skills-grid" id="skillsGrid">
+          <div class="skill-card reveal" data-cat="frontend">
+            <div class="skill-icon">⚛️</div>
+            <div class="skill-name">React.js</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-w="72" style="width: 0%"></div>
+            </div>
+            <div class="skill-pct">72%</div>
+          </div>
+          <div
+            class="skill-card reveal"
+            data-cat="frontend"
+            style="transition-delay: 0.05s"
+          >
+            <div class="skill-icon">🔺</div>
+            <div class="skill-name">Next.js</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-w="60" style="width: 0%"></div>
+            </div>
+            <div class="skill-pct">60%</div>
+          </div>
+          <div
+            class="skill-card reveal"
+            data-cat="frontend"
+            style="transition-delay: 0.1s"
+          >
+            <div class="skill-icon">🌐</div>
+            <div class="skill-name">HTML5 / CSS3</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-w="95" style="width: 0%"></div>
+            </div>
+            <div class="skill-pct">95%</div>
+          </div>
+          <div
+            class="skill-card reveal"
+            data-cat="frontend"
+            style="transition-delay: 0.15s"
+          >
+            <div class="skill-icon">💛</div>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-w="88" style="width: 0%"></div>
+            </div>
+            <div class="skill-pct">88%</div>
+          </div>
+          <div
+            class="skill-card reveal"
+            data-cat="mobile"
+            style="transition-delay: 0.2s"
+          >
+            <div class="skill-icon">🦋</div>
+            <div class="skill-name">Flutter</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-w="40" style="width: 0%"></div>
+            </div>
+            <div class="skill-pct">40%</div>
+          </div>
+          <div
+            class="skill-card reveal"
+            data-cat="mobile"
+            style="transition-delay: 0.25s"
+          >
+            <div class="skill-icon">📱</div>
+            <div class="skill-name">React Native</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-w="82" style="width: 0%"></div>
+            </div>
+            <div class="skill-pct">82%</div>
+          </div>
+          <div
+            class="skill-card reveal"
+            data-cat="backend"
+            style="transition-delay: 0.3s"
+          >
+            <div class="skill-icon">🟢</div>
+            <div class="skill-name">Node.js</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-w="88" style="width: 0%"></div>
+            </div>
+            <div class="skill-pct">88%</div>
+          </div>
+          <div
+            class="skill-card reveal"
+            data-cat="backend"
+            style="transition-delay: 0.35s"
+          >
+            <div class="skill-icon">🚀</div>
+            <div class="skill-name">Express</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-w="86" style="width: 0%"></div>
+            </div>
+            <div class="skill-pct">86%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="projects-header reveal">
+          <p class="section-label">Trabalhos Recentes</p>
+          <h2 class="section-title">Projetos <em>Seleccionados</em></h2>
+          <p class="section-sub">
+            Uma selecção de produtos e soluções construídas com foco em
+            performance e experiência do utilizador.
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-img">
+              <div class="project-img-bg"></div>
+              <div class="project-img-content">
+                <img src="src/assets/network.jpeg" alt="project redsocial" />
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Web App</div>
+              <div class="project-title">
+                I.P.C NetWork &mdash; Rede Social Académica
+              </div>
+              <p class="project-desc">
+                Rede social académica para estudantes do Instituto Politécnico
+                do cachiungo, com feed de notícias, grupos de estudo, eventos e
+                chat em tempo real.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Next.js</span
+                ><span class="project-tag">Node.js</span
+                ><span class="project-tag">WebSocket</span
+                ><span class="project-tag">TailwindCSS</span>
+                <span class="project-tag">PostgreSQL</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://ak-scoial.vercel.app"
+                  class="project-link primary"
+                  >Ver Deploy ↗</a
+                >
+                <a
+                  href="https://github.com/alcada72/ipc-social-network"
+                  target="_blank"
+                  class="project-link"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal" style="transition-delay: 0.1s">
+            <div class="project-img">
+              <div class="project-img-bg"></div>
+              <div class="project-img-content">
+                <img src="src/assets/mobile.png" alt="project fintech" />
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Mobile App</div>
+              <div class="project-title">JMC &mdash; Agendamentos</div>
+              <p class="project-desc">
+                Aplicação de pagamentos móveil de agendamento de cortes de
+                cabelo, com integração de pagamentos, sistema de reservas e
+                notificações push.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React Native-expo</span
+                ><span class="project-tag">Express</span
+                ><span class="project-tag">JWT</span
+                ><span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">Next.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#" style="opacity: 0" class="project-link primary"
+                  >Ver Deploy ↗</a
+                >
+                <a
+                  href="https://github.com/alcada72/jmc-agendamentos"
+                  target="_blank"
+                  class="project-link"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal" style="transition-delay: 0.2s">
+            <div class="project-img">
+              <div class="project-img-bg"></div>
+              <div class="project-img-content">
+                <img
+                  src="src/assets/bazar-angola.jpeg"
+                  alt="project ecommerce"
+                />
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">E-commerce</div>
+              <div class="project-title">
+                Bazar Angola &mdash; Plataforma de Compras
+              </div>
+              <p class="project-desc">
+                E-commerce completo com gestão de inventário, carrinho
+                persistente, checkout multi-step e painel administrativo
+                integrado.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React.js</span
+                ><span class="project-tag">Node.js</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://bazarangola.netlify.app/"
+                  class="project-link primary"
+                  >Ver Deploy ↗</a
+                >
+                <a
+                  href="https://github.com/alcada72/bazar-angola"
+                  target="_blank"
+                  class="project-link"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal" style="transition-delay: 0.3s">
+            <div class="project-img">
+              <div class="project-img-bg"></div>
+              <div class="project-img-content">
+                <img src="src/assets/e-commerce.jpeg" alt="project api" />
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">E-comerce</div>
+              <div class="project-title">
+                Loja online &mdash; Plataforma de compras
+              </div>
+              <p class="project-desc">
+                Uma simple e loja online de produtos variados, com sistema de
+                carrinho
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React.js</span
+                ><span class="project-tag">axios</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://loja-online-bay.vercel.app/"
+                  class="project-link primary"
+                  >ver deploy ↗</a
+                >
+                <a
+                  href="https://github.com/alcada72/loja-online"
+                  target="_blank"
+                  class="project-link"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal" style="transition-delay: 0.4s">
+            <div class="project-img">
+              <div class="project-img-bg"></div>
+              <div class="project-img-content">
+                <img
+                  src="src/assets/leading-page-escola.jpeg"
+                  alt="leading page escola"
+                />
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Landing Page</div>
+              <div class="project-title">
+                Landing Page &mdash; da escola Celestino Sambambi
+              </div>
+              <p class="project-desc">
+                este projeto é uma landing page para a escola Celestino
+                Sambambi, com o objetivo de promover a instituição e fornecer
+                informações sobre os cursos oferecidos, corpo docente e eventos
+                futuros. A página apresenta um design moderno e responsivo,
+                garantindo uma experiência de utilizador fluida em todos os
+                dispositivos.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span
+                ><span class="project-tag">CSS</span
+                ><span class="project-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://institutopolitecnicocelestinosambabi.netlify.app/"
+                  class="project-link primary"
+                  >Ver Deploy ↗</a
+                >
+                <a
+                  href="https://github.com/alcada72/Celestino-Sambambi"
+                  target="_blank"
+                  class="project-link"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal" style="transition-delay: 0.5s">
+            <div class="project-img">
+              <div class="project-img-bg"></div>
+              <div class="project-img-content">
+                <img
+                  src="src/assets/leading-page-m.jpeg"
+                  alt="leading page de uma influencer"
+                />
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-cat">Landing Page</div>
+              <div class="project-title">
+                Adalia Marcia &mdash; Landing page
+              </div>
+              <p class="project-desc">
+                esta landing page foi desenvolvida para a influencer Adalia
+                Marcia, com o objetivo de promover a sua marca pessoal e
+                fornecer informações sobre os seus serviços, parcerias e eventos
+                futuros. A página apresenta um design moderno e responsivo,
+                garantindo uma experiência de utilizador fluida em todos os
+                dispositivos.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span
+                ><span class="project-tag">CSS</span
+                ><span class="project-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://adalia-marcia.vercel.app/"
+                  class="project-link primary"
+                  >Ver Deploy ↗</a
+                >
+                <a
+                  href="https://github.com/alcada72/Adalia-Marcia-Repos"
+                  target="_blank"
+                  class="project-link"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div
+          class="reveal"
+          style="text-align: center; max-width: 600px; margin: 0 auto"
+        >
+          <p class="section-label">O que ofereço</p>
+          <h2 class="section-title">Os meus <em>Serviços</em></h2>
+          <p class="section-sub">
+            Soluções completas para cada fase do seu produto digital.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-number">01</div>
+            <div class="service-icon">🌐</div>
+            <div class="service-title">Desenvolvimento Web</div>
+            <p class="service-desc">
+              Sites e aplicações web modernas, rápidas e responsivas,
+              construídas com as melhores práticas da indústria.
+            </p>
+            <ul class="service-list">
+              <li>Landing pages &amp; sites institucionais</li>
+              <li>Web apps com React e Next.js</li>
+              <li>E-commerce e plataformas SaaS</li>
+              <li>Optimização de performance &amp; SEO</li>
+            </ul>
+          </div>
+          <div class="service-card reveal" style="transition-delay: 0.1s">
+            <div class="service-number">02</div>
+            <div class="service-icon">📱</div>
+            <div class="service-title">Desenvolvimento Mobile</div>
+            <p class="service-desc">
+              Aplicações móveis nativas e cross-platform para iOS e Android com
+              experiência de utilizador de nível premium.
+            </p>
+            <ul class="service-list">
+              <li>Apps Flutter (iOS &amp; Android)</li>
+              <li>Apps React Native ( &amp; Expo)</li>
+              <li>Integração com APIs externas</li>
+              <li>Publicação nas lojas App Store / Play Store</li>
+            </ul>
+          </div>
+          <div class="service-card reveal" style="transition-delay: 0.2s">
+            <div class="service-number">03</div>
+            <div class="service-icon">⚙️</div>
+            <div class="service-title">APIs &amp; Backend</div>
+            <p class="service-desc">
+              Arquitecturas backend sólidas, seguras e escaláveis que suportam o
+              crescimento do seu produto sem limites.
+            </p>
+            <ul class="service-list">
+              <li>APIs RESTful</li>
+              <li>Autenticação JWT </li>
+              <li>Bases de dados SQL e NoSQL</li>
+              <li>Deployment, DevOps</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-inner">
+          <div class="reveal">
+            <p class="section-label">Vamos trabalhar juntos</p>
+            <h2 class="section-title">Tem um projecto <em>em mente</em>?</h2>
+            <p class="section-sub">
+              Estou sempre aberto a novos desafios e colaborações. Fale comigo —
+              respondo em menos de 24 horas.
+            </p>
+            <div class="contact-links">
+              <a
+                href="mailto:alcada300@gmail.com"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="contact-link-icon">✉️</div>
+                <div class="contact-link-info">
+                  <div class="contact-link-label">Email</div>
+                  <div class="contact-link-value">alcada300@gmail.com</div>
+                </div>
+              </a>
+              <a
+                href="https://wa.me/244945724107"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="contact-link-icon">📱</div>
+                <div class="contact-link-info">
+                  <div class="contact-link-label">WhatsApp</div>
+                  <div class="contact-link-value">+244 945 724 107</div>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/alcadakilundica"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="contact-link-icon">💼</div>
+                <div class="contact-link-info">
+                  <div class="contact-link-label">LinkedIn</div>
+                  <div class="contact-link-value">
+                    www.linkedin.com/in/alcadakilundica
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://github.com/alcada72"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="contact-link-icon">⌥</div>
+                <div class="contact-link-info">
+                  <div class="contact-link-label">GitHub</div>
+                  <div class="contact-link-value">github.com/alcada72</div>
+                </div>
+              </a>
+              <a
+                href="https://twitter.com/alcada72"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="contact-link-icon">𝕏</div>
+                <div class="contact-link-info">
+                  <div class="contact-link-label">Twitter / X</div>
+                  <div class="contact-link-value">@alcada72</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay: 0.15s">
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" placeholder="O seu nome" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Email" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Assunto" required />
+              </div>
+              <div class="form-group">
+                <textarea
+                  rows="5"
+                  placeholder="Descreva o seu projecto ou ideia..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="formBtn"
+                style="width: 100%; justify-content: center"
+              >
+                Enviar Mensagem &rarr;
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-logo">AK.</div>
+        <p class="footer-copy">
+          &copy; 2026 <span>Alçada Kilundica</span> &middot; Abelha Maia. Feito
+          com &#9830; e muito café.
+        </p>
+        <a href="#hero" class="footer-back">↑ Voltar ao topo</a>
+      </div>
+    </footer>
+
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
