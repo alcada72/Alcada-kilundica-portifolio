@@ -68,6 +68,7 @@ const revealObs = new IntersectionObserver(
   },
   { threshold: 0.1 },
 );
+
 document.querySelectorAll(".reveal").forEach((el) => revealObs.observe(el));
 
 // Skill bars
